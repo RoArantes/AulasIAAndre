@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>docker-compose.yml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+docker-compose.yml</font>
+</center></td></tr></table>
+<pre><span class="s0">version</span><span class="s1">: </span><span class="s3">&quot;3.8&quot;</span>
+<span class="s0">services</span><span class="s1">:</span>
+  <span class="s0">sb-app</span><span class="s1">:</span>
+    <span class="s0">build</span><span class="s1">: </span><span class="s4">.</span>
+    <span class="s0">container_name</span><span class="s1">: </span><span class="s3">&quot;docker-app&quot;</span>
+    <span class="s0">ports</span><span class="s1">:</span>
+      <span class="s1">- </span><span class="s4">8080:8080</span>
+  <span class="s0">mongodb</span><span class="s1">:</span>
+    <span class="s0">image</span><span class="s1">: </span><span class="s4">mongo:latest</span>
+    <span class="s0">container_name</span><span class="s1">: </span><span class="s3">&quot;mongodb&quot;</span>
+    <span class="s0">ports</span><span class="s1">:</span>
+      <span class="s1">- </span><span class="s4">27070:27017</span></pre>
+</body>
+</html>
